@@ -25,11 +25,11 @@ The Network Event Calendar is a very simple Event Listing and Management plugin.
 == Installation ==
 
 1. Make sure you're using at least WordPress 3.0.1 (you can find the version number in the lower right hand corner of your WordPress Dashboard).
-2. For this plugin to be of any use, you must be using the network (aka MultiSite or MU) configuration. Not sure? Check the documentation.
+2. For this plugin to be of any use, you must be using the network (aka MultiSite or MU) configuration. Not sure? <a href="http://codex.wordpress.org/Create_A_Network">Check the documentation.</a>
 3. Download the plugin and unzip the files to a familiar location, such as your Desktop or Documents folder.
-4. Upload the “network-event-calendar" you created when unzipping the plugin to your 'wp-content/plugins' directory to your plugins directory. It will create a 'wp-content/plugins/network-event-calendar/' directory.
-5. Log-in to your WordPress site as a SuperAdmin and then go to your main / root site Dashboard. Select “Plugins" and locate the entry for “Network Event Calendar." You may need to click “Inactive" to show the inactive plugins.
-6. Click “Network Activate" to activate the plugin. If you do not see “Network Activate" as an option, you are either not running a Network/MultiSite installation, not logged in as SuperAdmin, or not viewing the root ( / ) site.
+4. Upload the "network-event-calendar" you created when unzipping the plugin to your 'wp-content/plugins' directory to your plugins directory. It will create a 'wp-content/plugins/network-event-calendar/' directory.
+5. Log-in to your WordPress site as a SuperAdmin and then go to your main / root site Dashboard. Select "Plugins" and locate the entry for "Network Event Calendar." You may need to click "Inactive" to show the inactive plugins.
+6. Click "Network Activate" to activate the plugin. If you do not see "Network Activate" as an option, you are either not running a Network/MultiSite installation, not logged in as SuperAdmin, or not viewing the root ( / ) site.
 
 == Future ==
 
