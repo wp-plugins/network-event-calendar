@@ -33,7 +33,7 @@ The Network Event Calendar is a very simple Event Listing and Management plugin.
 
 == Future ==
 
-Consider this plugin "Beta" (in the Google sense) at version 0.8.0 - I will be maintaining the plugin and adding features as I  get requests and time. <a href="http://aut0poietic.us/network-event-calendar-feature-requests/">Just leave a comment on the Feature Request page</a>; If it makes sense to me and does not conflict with my needs for the plugin, I'll be happy add the feature.
+Consider this plugin "Beta" (in the Google sense of the word) at version 0.8.0 - I will be maintaining the plugin and adding features as I get requests and time. <a href="http://aut0poietic.us/network-event-calendar-feature-requests/">Just leave a comment on the Feature Request page</a>; If it makes sense to me and does not conflict with my needs for the plugin, I'll be happy add the feature.
 
 * The event listing is un-styled;  this version does not include a style sheet and requires that you style the listing by editing your theme stylesheet. <a href="http://aut0poietic.us/how-to-style-the-network-event-calendar/">However, there is a view styling guide available to help get you going.</a>
 
