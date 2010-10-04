@@ -1,0 +1,1 @@
+function toggleSiteView(src){jQuery(src).parent().parent().find(".mueventssitelist").toggleClass("hiddenList");}

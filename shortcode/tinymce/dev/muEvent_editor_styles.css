@@ -1,0 +1,7 @@
+.datecontainer { background-color:#f8f8f8; padding:8px; margin:8px; }
+.timestamp-wrap { text-align:right ; margin-top:8px; }
+.order-wrap { margin-top:8px; }
+.betterlookhere { color:#F00; font-weight:bold; }
+.disabledInput { border:1px solid #f1f1f1 !important; color:#ddd !important; background-color:#f8f8f8 !important; }
+.disabledElement { border-color:#f1f1f1; color:#ddd; }
+.month { display:block ; text-align:left ; float:left ; }
