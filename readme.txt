@@ -4,7 +4,7 @@ Donate link: http://aut0poietic.us/applications/network-event-calendar/
 Tags: event, calendar, mult-site, mu
 Requires at least: 3.0.1
 Tested up to: 3.0.1
-Stable tag: 0.8.0 
+Stable tag: 0.8.0
 
 A simple event calendar for WordPress 3.0 MultiSite. 
 

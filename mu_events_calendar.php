@@ -1,7 +1,7 @@
 <?php
 /**
  * File: Network Event Calendar
- * 
+ *
  * Plugin Name: Network Event Calendar
  *
  * Plugin URI: http://aut0poietic.us/applications/network-event-calendar/
