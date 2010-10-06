@@ -5,7 +5,7 @@
    
    Last Edited: 
    
-   		Jer Brand on 2010/09/28
+   		Jer Brand on 2010/10/06
  */
 
 
@@ -115,17 +115,21 @@ function the_events( $args = array( ), $showText = true, $echoHTML = true )
 		$the_date = strtotime( $event->time ) ;
 		
 		$html .= sprintf( "\t<li class=\"event %s\">\n", $class) ; 
-		
-		$dayofweek = sprintf('<span class=\"dayoweek %1$s\">%1$s</span>',  date_i18n( "l", $the_date ) ) ;
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # #        BUGFIX 0.8.3         # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+// fixed the display of these items -- forgot that single-quotes will display
+// slashes....
+		$dayofweek = sprintf('<span class="dayoweek %1$s">%1$s</span>',  date_i18n( "l", $the_date ) ) ;
 /* 	translators: custom delimiter 1, see below.  */
-		$delimiter1 = sprintf('<span class\"date-delimiter\">%1$s</span>'	, _x(", " , 'Date Delimiter 1 (%2$s)' , MU_EVENTS_PLUGIN_ID ) ) ;
+		$delimiter1 = sprintf('<span class="date-delimiter">%1$s</span>'	, _x(", " , 'Date Delimiter 1 (%2$s)' , MU_EVENTS_PLUGIN_ID ) ) ;
 /* 	translators: custom delimiter 2, see below.  */
-		$delimiter2 = sprintf('<span class\"date-delimiter\">%1$s</span>'	, _x(" "  , 'Date Delimiter 2 (%4$s)' , MU_EVENTS_PLUGIN_ID ) ) ;
+		$delimiter2 = sprintf('<span class="date-delimiter">%1$s</span>'	, _x(" "  , 'Date Delimiter 2 (%4$s)' , MU_EVENTS_PLUGIN_ID ) ) ;
 /* 	translators: custom delimiter 3, see below.  */
-		$delimiter3 = sprintf('<span class\"date-delimiter\">%1$s</span>'	, _x(", " , 'Date Delimiter 3 (%6$s)' , MU_EVENTS_PLUGIN_ID ) ) ;
-		$month		= sprintf('<span class=\"month %1$s\">%1$s</span>'		, date_i18n( "F", $the_date ) ) ;
-		$day 		= sprintf('<span class=\"day day%1$s\">%1$s</span>'		, date_i18n( "j", $the_date ) ) ;
-		$year 		= sprintf('<span class=\"year year%1$s\">%1$s</span>'	, date_i18n( "Y", $the_date ) )  ;
+		$delimiter3 = sprintf('<span class="date-delimiter">%1$s</span>'	, _x(", " , 'Date Delimiter 3 (%6$s)' , MU_EVENTS_PLUGIN_ID ) ) ;
+		$month		= sprintf('<span class="month %1$s">%1$s</span>'		, date_i18n( "F", $the_date ) ) ;
+		$day 		= sprintf('<span class="day day%1$s">%1$s</span>'		, date_i18n( "j", $the_date ) ) ;
+		$year 		= sprintf('<span class="year year%1$s">%1$s</span>'	, date_i18n( "Y", $the_date ) )  ;
 
 		$html .= "\t\t<div class=\"date\">" ;
 /* 

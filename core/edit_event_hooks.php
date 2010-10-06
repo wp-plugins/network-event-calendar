@@ -6,7 +6,7 @@
   
   	Last Edited: 
  
- 		Jer Brand on 2010/09/16
+ 		Jer Brand on 2010/10/06
  */
  
 /*
@@ -56,7 +56,6 @@ function mu_events_publish_event_hook( $event_id )
 	$is_global 			= ( "1" == $event_is_global || 1 == $event_is_global ||  1 == $site_id ) ? 1 : 0 ;
 	
 	
-	
 	$permalink = get_permalink( $event_id ) ;
 	
 	if( '' != trim( $mu_event_id ) )
@@ -86,9 +85,35 @@ function mu_events_publish_event_hook( $event_id )
 				) , 
 			array( '%d' ) 
 		) ;
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # #        BUGFIX 0.8.4         # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#   If the query returns 0 rows affected, we've triggered the 0.8.0          #
+#   upgrade bug.  Re-create the global event entry.                                 #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+		if( 0 == $rows_affected )
+		{
+			$rows_affected = $wpdb->insert( 
+				___TABLE,
+				array( 
+						'time' 		=> $event->post_date , 
+						'title' 	=> $event->post_title , 
+						'text' 		=> $event->post_excerpt , 
+						'url' 		=> $permalink , 
+						'site_id' 	=> $site_id , 
+						'event_id' 	=> $event_id, 
+						'is_active' => 1,
+						'is_global' => $is_global
+					   ) 
+			);
+			
+			$mu_event_id = $wpdb->insert_id ;
+			add_post_meta( $event_id , MU_EVENTS_META_KEY_ID , $mu_event_id , true ) ;
+		}
 	}
 	else
 	{
+///TODO: Rednudant code -- functionize this in future versions.
 		$rows_affected = $wpdb->insert( 
 			___TABLE,
 			array( 

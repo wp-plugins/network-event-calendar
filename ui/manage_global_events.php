@@ -6,7 +6,7 @@
  *
  *	Last Edited: 
  *
- *		Jer Brand on 2010/09/20
+ *		Jer Brand on 2010/10/06
  */
 
 global $wpdb, $blog_id, $wp_locale, $switched , $s , $m , $paged , $event_count ; 
@@ -98,6 +98,12 @@ if ( isset( $_GET['noheader'] ) )
 	{ 
 		$current_site  	= get_blog_details( $result->site_id, true ) ;
 		$edit_url			= mu_events_build_admin_url( 'post.php' , array ('post' => $result->event_id , 'action' => 'edit' ) , $result->site_id )  ;
+		
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # #        BUGFIX 0.8.2         # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+// Changed the blog parameter for these links to the root blog.
+		
 		$delete_url		= mu_events_build_admin_url( 	'edit.php' , 
 																				array( 
 																					'post_type' => 'event' , 
@@ -108,7 +114,7 @@ if ( isset( $_GET['noheader'] ) )
 																					'paged' => $paged ,
 																					'ds' => $result->id
 																				), 
-																				$blog_id,
+																				1,
 																				MU_EVENTS_NONCE_DELETE ) ;
 		$trash_url		= mu_events_build_admin_url( 	'edit.php' , 
 																					array( 
@@ -120,7 +126,7 @@ if ( isset( $_GET['noheader'] ) )
 																						'paged' => $paged ,
 																						'd' => $result->id
 																					), 
-																					$blog_id,
+																					1,
 																					MU_EVENTS_NONCE_TOGGLE_ACTIVATE ) ;
 ?>
 		

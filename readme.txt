@@ -4,13 +4,15 @@ Donate link: http://aut0poietic.us/applications/network-event-calendar/
 Tags: event, calendar, mult-site, mu
 Requires at least: 3.0.1
 Tested up to: 3.0.1
-Stable tag: 0.8.0
+Stable tag: 0.8.4
 
 A simple event calendar for WordPress 3.0 MultiSite. 
 
 == Description ==
 
 The Network Event Calendar is a very simple Event Listing and Management plugin. What makes this plugin different from the multitude of other plugins that do the same job is that this plugin is WordPress 3.0.1 Multi-Site Network Aware.
+
+Important: When upgrading from 0.8.0, do not deactivate the plugin -- Just replace the files on the server. See <a href="http://aut0poietic.us/2010/10/06/network-event-calendar-0-8-0-upgrade/">this note on aut0poietic.us for full details.</a>
 
 *	All sub-sites in the network can create events for their own personal events. These work similar to posts, except you should set the "Publish" date for the date of your event.
 *	The primary site (located in the root / of the installation) can also create events; However, when the root site creates an event, that event is considered "Global" and appears in the listing of all sub-sites.
@@ -43,9 +45,16 @@ Consider this plugin "Beta" (in the Google sense) at version 0.8.0 - I will be m
 
 * This plugin requires the latest and greatest of both PHP and WordPress: PHP 5 and WordPress 3.0.1.
 
+== Updating 0.8.0 = 
 
+When upgrading from 0.8.0, do not deactivate the plugin -- Just replace the files on the server. See <a href="http://aut0poietic.us/2010/10/06/network-event-calendar-0-8-0-upgrade/">this note on aut0poietic.us for full details.</a>
 
 == Changelog ==
+= 0.8.4 =
+* Removed register_deactivation_hook
+* Fixed delete/deactivate sub-site entry from root blog
+* Fixed CSS Extended Class Names (quotation issue)
+* Check for disassociated Event Document Type on PUBLISH/SAVE/UPDATE and restore Global Look-up entry.
 
 = 0.8.0 =
 * Initial Release

@@ -10,7 +10,7 @@
  * 
  * Author: aut0poietic / Jer Brand
  * 
- * Version: 0.8.0
+ * Version: 0.8.4
  * 
  * Author URI: http://aut0poietic.us
  * 
@@ -39,11 +39,18 @@ define( "MU_EVENTS_NONCE_TOGGLE_ACTIVATE" 		, 'mu-trash-item' ) ;
 define( "MU_EVENTS_OPTION_STATUS_MESSAGE" 		, 'mu_events_admin_message' ) ;
 define( 'MU_EVENTS_ADMIN_EVENT_LIMIT' 			, 20 ) ;
 
+
+
 # # # Must be loaded every Page Load
 
 require_once( MU_EVENTS_PLUGIN_DIR . '/core/init.php' ) ;
 register_activation_hook( __FILE__ 	, 'mu_events_install' ) ; 
-register_deactivation_hook( __FILE__, 'mu_events_uninstall' ) ;
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # #        BUGFIX 0.8.1         # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+// uncomment this line before deactivation to completely remove the database.
+//register_deactivation_hook( __FILE__, 'mu_events_uninstall' ) ;
 
 
 require_once( MU_EVENTS_PLUGIN_DIR . '/core/mu_event_api.php' ) ;
