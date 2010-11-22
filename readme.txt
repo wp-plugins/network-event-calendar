@@ -4,7 +4,7 @@ Donate link: http://aut0poietic.us/applications/network-event-calendar/
 Tags: event, calendar, mult-site, mu
 Requires at least: 3.0.1
 Tested up to: 3.0.1
-Stable tag: 0.8.4
+Stable tag: 0.8.7
 
 A simple event calendar for WordPress 3.0 MultiSite. 
 
@@ -50,6 +50,10 @@ Consider this plugin "Beta" (in the Google sense) at version 0.8.0 - I will be m
 When upgrading from 0.8.0, do not deactivate the plugin -- Just replace the files on the server. See <a href="http://aut0poietic.us/2010/10/06/network-event-calendar-0-8-0-upgrade/">this note on aut0poietic.us for full details.</a>
 
 == Changelog ==
+= 0.8.7 =
+* Added POT File to translations folder
+* Fixed php short tag inclusion on shortcode_handler.php
+
 = 0.8.4 =
 * Removed register_deactivation_hook
 * Fixed delete/deactivate sub-site entry from root blog
