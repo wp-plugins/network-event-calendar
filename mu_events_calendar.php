@@ -10,7 +10,7 @@
  * 
  * Author: aut0poietic / Jer Brand
  * 
- * Version: 0.8.4
+ * Version: 0.8.7
  * 
  * Author URI: http://aut0poietic.us
  * 
