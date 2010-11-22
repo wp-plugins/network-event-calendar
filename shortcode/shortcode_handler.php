@@ -1,4 +1,4 @@
-<?
+<?php
 /** 
  *	File: shortcode_handler.php
  *
@@ -6,7 +6,7 @@
  * 
  *	Last Edited: 
  *	
- *		Jer Brand on 2010/09/27
+ *		Jer Brand on 2010/11/22
  */
 
 /*
